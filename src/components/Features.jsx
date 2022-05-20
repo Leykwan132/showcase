@@ -2,9 +2,12 @@ import React from "react";
 import assets from "../assets";
 import styles from "../styles/Global";
 
-const FeatureCard = ({ iconUrl, iconText }) => (
+const FeatureCard = ({ iconUrl, iconText, linkUrl }) => (
   <div className={styles.featureCard}>
-    <img src={iconUrl} alt="icon" className={styles.featureImg} />
+    <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+      {" "}
+      <img src={iconUrl} alt="icon" className={styles.featureImg} />
+    </a>
     <p className={styles.featureText}>{iconText}</p>
   </div>
 );
@@ -22,8 +25,16 @@ const Features = () => {
           </p>
         </div>
         <div className={styles.flexWrap}>
-          <FeatureCard iconUrl={assets.react} iconText="React Native" />
-          <FeatureCard iconUrl={assets.javascript} iconText="Javascript" />
+          <FeatureCard
+            iconUrl={assets.react}
+            iconText="React Native"
+            linkUrl="https://reactnative.dev/"
+          />
+          <FeatureCard
+            iconUrl={assets.javascript}
+            iconText="Javascript"
+            linkUrl="https://www.javascript.com/"
+          />
         </div>
       </div>
     </div>

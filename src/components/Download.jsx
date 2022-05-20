@@ -11,7 +11,15 @@ const Download = () => {
         <p className={`${styles.pText} ${styles.blackText}`}>
           Get the full source code on Github
         </p>
-        <button className={styles.btnPrimary}>Source Code</button>
+        <button className={styles.btnPrimary}>
+          <a
+            href="https://github.com/Leykwan132/NFT-Marketplace-React-Native-"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source Code
+          </a>
+        </button>
         <div className={styles.flexCenter}>
           <img
             src={assets.scene}
